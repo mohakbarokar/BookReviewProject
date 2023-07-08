@@ -46,7 +46,7 @@ router.get("/review/:title", (req, res) => {
     let filtered_reviews = [];
     filtered_books.forEach(function (book) {
       console.log(book.review);
-      filtered_reviews.push({ "BookName": book.title, "review": book.review });
+      filtered_reviews.push({ "BookName": book.title, "reviews": book.reviews });
     });
     res.send(filtered_reviews);
   } else {
